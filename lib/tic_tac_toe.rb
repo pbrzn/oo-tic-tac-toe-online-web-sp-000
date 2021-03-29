@@ -104,7 +104,7 @@ class TicTacToe
     while !over? && turn_count<9
       turn
     end
-    if over? && won?
+    if won?
       puts "Congratulations #{winner}!"
     elsif full? && draw?
       puts "Cat's Game!"
