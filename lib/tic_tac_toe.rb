@@ -67,7 +67,7 @@ class TicTacToe
       token=current_player
       move(index, token)
       display_board
-    elsif !valid_move?(index) 
+    elsif !valid_move?(index) && !over?
       turn
     end
   end
@@ -106,7 +106,7 @@ class TicTacToe
     end
     if won?
       puts "Congratulations #{winner}!"
-    elsif full? && draw?
+    elsif draw?
       puts "Cat's Game!"
     end
   end
