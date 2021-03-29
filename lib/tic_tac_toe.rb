@@ -102,6 +102,7 @@ class TicTacToe
   end
   
   def play
+    turn
     while !over? && @counter<9
       turn
     end
