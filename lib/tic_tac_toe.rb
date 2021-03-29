@@ -63,7 +63,7 @@ class TicTacToe
     puts "Please enter 1-9"
     input=gets.strip
     index=input_to_index(input)
-    if valid_move?(index)
+    if valid_move?(index) && !over?
       token=current_player
       move(index, token)
       display_board
@@ -91,7 +91,7 @@ class TicTacToe
   end
   
   def over?
-    true if full? || won?
+    true if full? || won? || draw?
   end
   
   def winner
