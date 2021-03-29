@@ -102,12 +102,13 @@ class TicTacToe
   end
   
   def play
+    while !over? && @counter<9
+      turn
+    end
     if over? && won?
       puts "Congratulations #{winner}!"
     elsif over? && draw?
       puts "Cat's Game!"
-    else
-      turn
     end
   end
 end
